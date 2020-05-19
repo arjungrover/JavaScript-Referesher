@@ -1,0 +1,54 @@
+Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values", 
+according to the spec —  There's no such thing as an integer in JavaScript (except BigInt)
+
+console.log(3 / 2);             // 1.5, not 1
+console.log(Math.floor(3 / 2)); // 1
+
+apparent integer is in fact implicityly a float.
+
+0.1 + 0.2 == 0.30000000000000004;
+
+The standard arithmetic operators are supported, including 
+addition, subtraction, modulus (or remainder) arithmetic, and so forth.
+
+Math.sin(3.5);
+var circumference = 2 * Math.PI * r;
+
+You can convert a string to an integer using the built-in parseInt() function. 
+This takes the base for the conversion as an optional second argument, which you should always provide:
+
+parseInt('123', 10); // 123
+parseInt('010', 10); // 10
+
+If you want to convert a binary number to an integer, just change the base:
+
+parseInt('11', 2); // 3
+
+You can also use the unary + operator to convert values to numbers:
+
++ '42';   // 42
++ '010';  // 10
++ '0x10'; // 16
+
+NaN is toxic: if you provide it as an operand to any mathematical operation, 
+the result will also be NaN:
+
+NaN + 5; // NaN
+
+isNaN(NaN); // true
+
+JavaScript also has the special values Infinity and -Infinity:
+
+ 1 / 0; //  Infinity
+-1 / 0; // -Infinity
+
+isFinite(1 / 0); // false
+isFinite(-Infinity); // false
+isFinite(NaN); // false
+
+The parseInt() and parseFloat() functions parse a string until they reach a character that isn't valid for the 
+specified number format, then return the number parsed up to that point. 
+However the "+" operator simply converts the string to NaN if there is an invalid character contained within it.
+
+
+'hello'.length; // 5
