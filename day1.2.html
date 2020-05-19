@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <head>
+        <title>Lets get Started</title>
+        <script>
+            function myfunction(){
+                // document.getElementById("2").innerHTML="Magic happened";
+                // document.getElementById("1").innerHTML=1+2;
+                
+                
+                //will delete all html content
+                document.write(5+6);
+
+                // window is the global object, you can call an alert either by it's 
+                // shorthand: alert( 'Hello!' ); or by referencing the global object 
+                // specifically: window.alert( 'Hello!' );
+
+
+                window.alert(5+6);
+                alert(7+6);
+            }
+            function learnVariables(){
+                window.alert("Learn about variables");
+                var x = "5"+3+2;  //532
+                var y = 5+3+4;  //12
+                var z = +5+3; //8
+                var k = 5+3+"4"; //84
+                // window.alert(x);
+                // window.alert(y);
+                // window.alert(z);
+                // window.alert(k);
+
+                /*
+                In the JavaScript library jQuery, for instance, the main function $ is 
+                used to select HTML elements. In jQuery $("p"); means "select all p elements".
+                */
+                var $$$ = "Hello world";
+                var $$ = "its me";
+
+                // window.alert($$$);
+                // alert($$);
+
+                /*
+                convention among professional programmers is to use it as an alias for 
+                "private (hidden)" variables.
+                */
+                var _="hey its me underscore";
+                var __ = "double underscore";
+                // alert(_);
+                // alert(__);
+
+               
+                var b = 2;
+                // alert(a**b);  //3^2 = 9
+                // var c = Math.pow(a,b);
+                // alert(Math.pow(a,b));
+                var a = 3;
+
+                var a1 = "Arjun";
+                var a2 = {firstName: "arjun", lastName: "juno"};
+                // alert(a2);   //[object object]
+
+                // alert(typeof(a));   //number
+                // alert(typeof(a1));  //String
+                // alert(typeof(a2));  //object
+
+                a  = "Dynamic";
+                // alert(typeof(a));
+
+                a=34.000;
+                // alert(typeof(a));  //number
+
+
+                var cars = ["honda","bmw","volvo"];
+                // alert(cars);   //honda, bmw, volvo
+                // alert(typeof(cars));    //object
+
+                var obj = {firstName:"juno", age:"23",eyecolor:"Black"};
+                // alert(obj);    //[object object]
+                // alert(typeof(obj));  //object
+
+                // var car; //undefined
+                // alert(typeof car);
+                // car = ""; //string
+                // alert(typeof car);
+
+                // car=null;
+                // alert(car);   //value is null 
+                // alert(typeof car);   //type object
+
+
+                alert(typeof undefined);  //undefined
+                alert(typeof null);   //object
+                alert(null===undefined);  //false  (type)
+                alert(null==undefined);  //true (value equal)
+
+                alert(typeof function myfunction(){});   //function
+            }
+        </script>
+    </head>
+    <body>
+        <h2 id="2">JavaScript in HTML body</h2>
+        <p id="1"></p>
+        <script>
+            document.getElementById("1").innerHTML="Hey we are working!!";
+            document.getElementById("2").innerHTML="woahhh";
+        </script> 
+
+        <button type="button" onclick="myfunction()">Click and change the Heading!!</button>
+        <button type="button" onclick="window.print()">Print the Window</button>
+        <button type="button" onclick="learnVariables()">Learn About Variables</button>
+    </body>
+</html>
